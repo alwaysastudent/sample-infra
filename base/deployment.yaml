@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eimmo-backend-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eimmo-backend
+      component: api
+  template:
+    metadata:
+      labels:
+        app: eimmo-backend
+        component: api
+    spec:
+      containers:
+        - name: api
+          image: eimmo-backend-image:latest
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: 80m
+          env:
+            - name: PHASE
+              value: "development"
+            - name: FLASK_ENV
+              value: "development"
