@@ -16,6 +16,6 @@ patchesJson6902:
 images:
 - name: eimmo-backend-image
   newName: tttt
-  newTag: cca307fd63cfa6033251f2618772263c1feb5065
+  newTag: e0b24a4932094fcd0683a26e58fbf02e397870f8
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
